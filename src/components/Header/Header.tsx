@@ -13,22 +13,24 @@ const Header: React.FC = () => {
     return push(ROUTES.ROOT);
   };
   return (
-    <Box bgColor='green.300' py={4}>
+    <Box bgColor='blackAlpha.800' py={4}>
       <Container maxW='container.xl'>
         <Stack direction='row' spacing={8}>
           {user ? (
             <>
-              <Button as={Link} to={ROUTES.HOME}>
+              <Button as={Link} to={ROUTES.HOME} colorScheme='orange'>
                 Home
               </Button>
-              <Button onClick={handleLogout}>Logout</Button>
+              <Button onClick={handleLogout} colorScheme='orange'>
+                Logout
+              </Button>
             </>
           ) : (
             <>
-              <Button as={Link} to={ROUTES.LOGIN}>
+              <Button as={Link} to={ROUTES.LOGIN} colorScheme='orange'>
                 Login
               </Button>
-              <Button as={Link} to={ROUTES.REGISTER}>
+              <Button as={Link} to={ROUTES.REGISTER} colorScheme='orange'>
                 Register
               </Button>
             </>

@@ -15,10 +15,15 @@ const CounterPage: React.FC = () => {
           <Heading>{count}</Heading>
         </Flex>
         <Stack direction='row' alignItems='center' justifyContent='center' spacing={4}>
-          <Button width='200px' disabled={isButtonDisabled} onClick={() => setCount((count) => (count -= 1))}>
+          <Button
+            width='150px'
+            disabled={isButtonDisabled}
+            onClick={() => setCount((count) => (count -= 1))}
+            colorScheme='red'
+          >
             -
           </Button>
-          <Button width='200px' onClick={() => setCount((count) => (count += 1))}>
+          <Button width='150px' onClick={() => setCount((count) => (count += 1))} colorScheme='blue'>
             +
           </Button>
         </Stack>

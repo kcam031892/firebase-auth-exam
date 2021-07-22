@@ -1,13 +1,14 @@
+import { Heading } from '@chakra-ui/react';
+import { Card } from 'components';
 import React from 'react';
 
-import { useFirebaseAuth } from 'shared/hooks/useFirebaseAuth';
-
 const HomePage: React.FC = () => {
-  const { user } = useFirebaseAuth();
   return (
-    <div>
-      <h1>{user?.email}</h1>
-    </div>
+    <Card>
+      <Heading as='h3' fontSize='20px'>
+        Welcome to Digital Doors Software Solutions Inc.
+      </Heading>
+    </Card>
   );
 };
 
