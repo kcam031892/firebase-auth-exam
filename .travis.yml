@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker run mack031892/firebase-auth-exam npm run test
+
+deploy:
+  provider: heroku
+  api_key: $API_KEY
+  app: docker-demo-app-frontend
+  on:
+    branch: main
